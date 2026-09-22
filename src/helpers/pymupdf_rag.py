@@ -384,6 +384,7 @@ def to_markdown(
     ignore_code=False,
     extract_words=False,
     show_progress=False,
+    custom_bar=None,
     use_glyphs=False,
     ignore_alpha=False,
     **kwargs,
@@ -1339,7 +1340,8 @@ def to_markdown(
 
     if show_progress:
         print(f"Processing {FILENAME}...")
-        pages = ProgressBar(pages)
+        progress_bar = custom_bar or ProgressBar
+        pages = progress_bar(pages)
     for pno in pages:
         parms = get_page_output(
             doc,

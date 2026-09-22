@@ -633,6 +633,7 @@ def _default_options(backend):
             pages=None,
             page_width=612,
             show_progress=False,
+            custom_bar=None,
             use_ocr=True,
             write_images=False,
         )
@@ -647,6 +648,7 @@ def _default_options(backend):
             write_images=False,
             embed_images=False,
             show_progress=False,
+            custom_bar=None,
             force_text=True,
             use_ocr=True,
             force_ocr=False,
@@ -662,6 +664,7 @@ def _default_options(backend):
             pages=None,
             ignore_code=False,
             show_progress=False,
+            custom_bar=None,
             force_text=True,
             ocr_dpi=150,
             use_ocr=True,
