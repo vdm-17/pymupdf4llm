@@ -984,7 +984,7 @@ class ParsedDocument:
         if show_progress and len(self.pages) > 5:
             print(f"Generating markdown text...")
 
-            progress_bar = custom_bar | ProgressBar
+            progress_bar = custom_bar or ProgressBar
             this_iterator = progress_bar(self.pages)
         else:
             this_iterator = self.pages
